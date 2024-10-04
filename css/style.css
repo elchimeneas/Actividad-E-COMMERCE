@@ -1,0 +1,624 @@
+/* Mulish FONT */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Work Sans FONT */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Afacad Flux FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+/* EXCEPTUANDO LOS ESTILOS DEL MODAL, TODO LO DEMÁS ESTÁ HECHO SIN AYUDA DE CHATGPT */
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #dddddd;
+}
+
+:root {
+    --pink: #f96496;
+    --cream-pink: #eabcc5;
+    --cream-cyan: #55bfc6;
+    --lightdark-purple: #7e3e6e;
+    --dark-purple: #1a2e57;
+    --dark-cyan: #2e8299;
+    --cream: #e7d7c9;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-container a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-cyan);
+}
+
+.logo-img {
+    max-height: 80px;
+    margin-right: 8px;
+    margin-left: 100px;
+}
+
+.logo-container a img {
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo-container a img:hover {
+    transform: scale(1.1);
+    filter: saturate(30%);
+}
+
+.header-container {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--dark-purple);
+}
+
+.header-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-container a h1 {
+    color: var(--cream-pink);
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    cursor: pointer; 
+    position: relative;
+}
+
+.header-container a h1:hover {
+    color: var(--cream)
+}
+
+.header-container a h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    background-color: var(--cream);
+    transition: width 0.5s ease;
+}
+
+.header-container a h1:hover::after{
+    width: 100%;
+}
+    
+.button-container {
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.button-container span {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--cream-pink);
+}
+
+.button-container:hover {
+    color: var(--cream);
+}
+
+.button-container button {
+    display: grid;
+    place-content: center;
+    padding: 5px;
+    width: 100%;
+    color: var(--dark-purple);
+    border-radius: 0.4rem;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--cream-pink);
+    transition: 0.3s ease;
+}
+
+.button-container button:active{
+    transform: scale(0.9);
+}
+
+.button-container button:hover {
+    background-color: var(--cream);
+    color: var(--pink);
+}
+
+.button-container button:hover iconify-icon {
+    transform: rotateY(180deg);
+    transition: transform 1s;
+}
+
+.button-container iconify-icon {
+    transition: transform 1s;
+}
+
+.button-container iconify-icon:hover {
+    transform: rotateY(180deg);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin: 20px 0;
+}
+
+.product--card {
+    width: 40%; /* Cambio del 25 al 40 ya que se ve bastante raro con 25%*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--cream-pink);
+    background-color: var(--dark-purple);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+    padding-bottom: 8px;
+}
+
+.product--card h3 {
+    text-align: center;
+    padding: 0 20px;
+    text-wrap:balance;
+}
+
+.product--card p {
+    font-size: 1.3rem;
+}
+
+.product--img {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product--img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.product--img:hover img {
+    transform: scale(1.1);
+}
+
+.product--card button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 0.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.0rem;
+    background-color: var(--cream-pink);
+    color: var(--dark-purple);
+    font-family: 'Afacad Flux', sans-serif;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.product--card button:hover{
+    background-color: var(--cream);
+    color: var(--dark-purple);
+}
+
+.product--card button:active{
+    transform: scale(1.1);
+}
+
+.form-container{
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-purple);
+    border-radius: 10px;
+    padding: 50px 20px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.form-container form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+
+.form-container form label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form button {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 800;
+    font-family: 'Mulish', sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.form-container form button:hover {
+    background-color: var(--cream);
+    color: var(--dark-purple);
+}
+
+.form-container input, textarea {
+    outline: none;
+    width: 50%;
+    border: 1px solid var(--dark-purple);
+    font-family: 'Work Sans', sans-serif;
+    padding: 5px 4px 5px 4px;
+}
+
+.form-container textarea {
+    min-width: 50%;
+    min-height: 50px;
+    max-width: 50%;
+    field-sizing: content; /* Nueva propiedad CSS de Chrome 123 para ajustar el contenido del textarea automaticamente. */
+}
+
+.form-container input::placeholder, textarea::placeholder {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.map-container {
+    margin-top: 40px;
+}
+
+.map-container iframe{
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.modal-container {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--cream-pink);
+    color: var(--dark-purple); 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+}
+
+.modal-content h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.modal-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    max-height: 400px;
+    width: 100%; 
+    padding: 10px;
+}
+
+.product-entry {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 0.3rem;
+    background-color: #fff;
+}
+
+.remove-product-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-product-button:hover {
+    background-color: #ff1a1a;
+}
+
+.close-modal {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    text-transform: uppercase;
+    font-weight: 800; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: 0.5s ease;
+}
+
+.close-modal:hover {
+    background-color: var(--dark-cyan);
+}
+
+
+.footer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--dark-purple);
+    color: var(--cream);
+    margin-top: 50px;
+}
+
+.footer--logo a img{
+    width: 13%;
+    margin: 10px;
+}
+
+.footer--info {
+    display: grid;
+    place-content: center;
+    font-family: 'Mulish', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.footer--info span {
+    font-size: 25px;
+}
+
+.footer--socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer--socials a{
+    text-decoration: none;
+    color: var(--cream);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+}
+
+.footer--socials a:hover:first-child {
+    color: #25d366;
+}
+
+.footer--socials a:hover:nth-child(2){
+    color: #8b9dc3;
+}
+
+.footer--socials a:hover:nth-child(3){
+    color: #0077b5;
+}
+
+.footer--socials a:hover:nth-child(4){
+    color: #d62976;
+}
+
+.footer--socials a iconify-icon {
+    font-size: 2rem;
+    margin-right: 5px;
+
+}
+
+.footer--socials a:hover iconify-icon {
+    transform: rotateY(360deg);
+    transition: transform 1s;
+}
+
+.footer--socials iconify-icon {
+    transition: transform 1s;
+}
+
+.footer--socials iconify-icon:hover {
+    transform: rotateY(360deg);
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        margin-left: 20px;
+        max-height: 100px;
+        margin-top: 20px;
+    }
+
+    .header-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header-container a h1 {
+        font-size: 1.2rem;
+    }
+
+    .button-container button {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    .button-container span {
+        margin-bottom: 10px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product--card {
+        width: 70%;
+    }
+
+    .product--card p {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+
+    .form-container input, .form-container textarea {
+        max-width: 50%;
+    }
+
+    .form-container input::placeholder, .form-container textarea::placeholder {
+        font-size: 0.7rem;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer--logo a img {
+        width: 50%;
+    }
+
+    .footer--info, .footer--info span {
+        font-size: 10px;
+    }
+
+    .footer--socials a {
+        font-size: 0.4rem;
+    }
+
+    .footer--socials a iconify-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .logo-img {
+        margin-left: 100px;
+        max-height: 80px;
+    }
+
+    .header-container {
+        grid-template-columns: repeat(3, 1fr);
+        height: 100px;
+    }
+
+    .header-container a h1 {
+        font-size: 1.5rem;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product--card {
+        width: 45%;
+    }
+
+    .product--card p {
+        font-size: 1.2rem;
+    }
+
+    .form-container {
+        width: 70%;
+    }
+
+    .form-container input, .form-container textarea {
+        max-width: 70%;
+    }
+
+    .form-container input::placeholder, .form-container textarea::placeholder {
+        font-size: 0.8rem;
+    }
+
+    .map-container iframe {
+        height: 400px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .footer--logo a img {
+        width: 30%;
+    }
+
+    .footer--info, .footer--info span {
+        font-size: 14px;
+    }
+
+    .footer--socials a {
+        font-size: 0.8rem;
+    }
+
+    .footer--socials a iconify-icon {
+        font-size: 1.8rem;
+    }
+}

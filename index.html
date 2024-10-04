@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>E-Commerce - DOR</title>
+</head>
+<body>
+    <nav class="header-container">
+        <div class="logo-container">
+            <a href="#">
+                <img src="./img/logo.png" alt="E-Commerce logo" class="logo-img">
+            </a>
+        </div>
+
+            <a href="#"><h1>E-COMMERCE</h1></a>
+        
+        <div class="button-container">
+            <button id="cartButton" onclick="openModal()"><iconify-icon icon="tabler:garden-cart"></iconify-icon></button>
+            <span>Carrito de compra</span>
+        </div>
+    </nav>
+
+    <div class="modal-container">
+        <div class="modal-content">
+            <h2>Tu carrito</h2>
+            <div class="modal-products">
+            </div>
+            <button class="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product--card">
+            <div class="product--img">
+                <img src="./img/products/bottle.png" alt="Bottle of aluminum" class="product--img">
+            </div>
+            <h2>Bottle of aluminum</h2>
+            <h3>Una botella muy rosa que te puede acompañar en tu día a día, siempre hay que estar hidratado/a.</h3>
+            <p>Precio: 15€</p>
+            <button class="addCartButton">Agregar al carrito</button>
+        </div>
+        <div class="product--card">
+            <div class="product--img">
+                <img src="./img/products/glasses.png" alt="Pink glasses" class="product--img">
+            </div>
+            <h2>Pink glasses</h2>
+            <h3>Estas gafas tienen la última tecnología en mantener tu flow en las fiestas.</h3>
+            <p>Precio: 10€</p>
+            <button class="addCartButton">Agregar al carrito</button>
+        </div>
+        <div class="product--card">
+            <div class="product--img">
+                <img src="./img/products/hair-dryer.png" alt="Hair dryer" class="product--img">
+            </div>
+            <h2>Hair Dryer</h2>
+            <h3>¿Te imaginas acostarte con el pelo mojado después de ducharte? Pues ya sabes lo que tienes que comprar, este secador también muy rosa.</h3>
+            <p>Precio: 20€</p>
+            <button class="addCartButton">Agregar al carrito</button>
+        </div>
+        <div class="product--card">
+            <div class="product--img">
+                <img src="./img/products/soap-dispenser.png" alt="Soap dispenser" class="product--img"></div>
+            <h2>Soap dispenser</h2>
+            <h3>Esperamos que te laves las manos cada vez que vuelves de la calle, pero como no, hacerlo con este dispensador.</h3>
+            <p>Precio: 8€</p>
+            <button class="addCartButton">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Contacta con nosotros</h1>
+        <form action="">
+            <label for="name"><iconify-icon icon="mdi:user"></iconify-icon> Nombre:</label>
+            <input type="text" placeholder="Escribe tu nombre">
+            <label for="email"><iconify-icon icon="mdi:email"></iconify-icon> Correo electrónico:</label>
+            <input type="email" name="email" placeholder="Escribe tu correo">
+            <label for="message"><iconify-icon icon="mdi:message"></iconify-icon> Mensaje:</label>
+            <textarea name="message" placeholder="Escribe tu mensaje"></textarea>
+            <button>Enviar</button>
+        </form>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.6057539882454!2d-15.442067223997853!3d28.097566208171834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4095b954df2b5f%3A0x2bec717ab8988008!2sIES%20Ana%20Luisa%20Ben%C3%ADtez!5e0!3m2!1ses!2ses!4v1727981577553!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer--logo">
+            <a href="#"><img src=".//img/logo.png" alt="Logo E-Commerce"></a>
+        </div>
+
+        <div class="footer--info">
+            <strong>Todos los derechos reservados <span>&copy</span> E-COMMERCE (César Ramírez).</strong>
+        </div>
+
+        <div class="footer--socials">
+            <a href="https://web.whatsapp.com/"><iconify-icon icon="bxl:whatsapp-square"></iconify-icon>Whatsapp</a>
+            <a href="https://facebook.com/"><iconify-icon icon="bxl:facebook-square"></iconify-icon>Facebook</a>
+            <a href="https://linkedin.com/"><iconify-icon icon="bxl:linkedin-square"></iconify-icon>LinkedIn</a>
+            <a href="https://instagram,com/"><iconify-icon icon="bxl:instagram-alt"></iconify-icon>Instagram</a>
+        </div>
+    
+    </footer>
+
+
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
