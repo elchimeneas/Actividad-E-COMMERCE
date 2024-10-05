@@ -5,8 +5,10 @@ const modalContent = document.querySelector('.modal-content');
 const modalProducts = document.querySelector('.modal-products');
 const addCartButton = document.querySelectorAll('.addCartButton');
 const closeModalButton = document.querySelector('.close-modal');
+const totalPriceSpan = document.querySelector('.totalPrice');
 
 const productDetails = [];
+let totalPrice = 0;
 
 // Función para abrir el modal
 function openModal() {
@@ -27,7 +29,6 @@ function getProductDetails(item) {
     const productPrice = item.querySelector('p').innerText;
     const productImg = item.querySelector('img').src;
 
-    // Reemplazamos el texto "Precio" y "€" por nada para obtener el número
     const price = parseFloat(productPrice.replace('Precio: ', '').replace('€', ''));
 
     const product = {
@@ -60,11 +61,15 @@ function addProductToModal(product) {
     removeButton.innerText = 'Eliminar';
     removeButton.classList.add('remove-product-button');
 
-    // Evento para eliminar el producto del modal
+
     removeButton.addEventListener('click', () => {
+        totalPrice -= product.price; // Restar el precio al total
+        updateTotalPrice(); // Actualizar la visualización del total
         productDiv.remove();
-        // Puedes añadir más lógica si quieres eliminar el producto del array 'cart' o actualizar algo más.
     });
+
+    totalPrice += product.price; // Sumar el precio al total
+    updateTotalPrice(); // Actualizar la visualización del total
 
     productDiv.appendChild(productImg);
     productDiv.appendChild(productName);
@@ -73,6 +78,11 @@ function addProductToModal(product) {
     productDiv.appendChild(removeButton);
 
     modalProducts.appendChild(productDiv);
+}
+
+// Función para actualizar la visualización del precio total
+function updateTotalPrice() {
+    totalPriceSpan.innerText = `Total: ${totalPrice}€`;
 }
 
 document.querySelectorAll('.addCartButton').forEach((button, index) => {

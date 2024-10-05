@@ -159,13 +159,13 @@ body{
 
 .product-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     margin: 20px 0;
 }
 
 .product--card {
-    width: 40%; /* Cambio del 25 al 40 ya que se ve bastante raro con 25%*/
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,6 +342,12 @@ body{
 .modal-content h2 {
     font-weight: 800;
     text-transform: uppercase;
+}
+
+.totalPrice {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 22px;
 }
 
 .modal-products {
